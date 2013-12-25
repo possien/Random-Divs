@@ -1,0 +1,3 @@
+While trying to auto-generate some styling for responsive websites I changed directions and came up with this code.  Maybe it's useful for something you are building.  Each time you refresh the page the div's change size and color.  With a little more math you could make it stretch to fill your page or body width a little more neatly. You can change the colors, margins, radii, etc...
+
+  

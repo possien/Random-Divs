@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> 
+<title>Random Divs and CSS</title>
+</head>
+<body>
+<style>
+@media only screen and (min-width: 150px) and (max-width:740px){
+div{width:95%;}
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+var rm;
+var w;
+var h;
+var mt = ".5%";
+var i = 1;
+var color=['blue', 'grey', 'yellow', 'red', 'green','orange', 'purple', 'lime', 'maroon','cyan'];
+while (i<14){
+var bg = color.sort(function() {return 0.5 - Math.random()})[1];
+function getRandomInt (min, max) {
+return Math.floor(Math.random() * (max - min + 1)) + min;
+											}
+w = getRandomInt(125,350)+'px';
+//h = getRandomInt(250,350)+'px';
+h = 350+'px';
+var id = '#test'+i;
+$(id).css({
+
+	background: bg,
+    height  			:  h,
+    width   			:  w,
+    padding 			:  '10px',
+    'margin-right' 	:  mt,
+    'margin-top' 		:  mt,
+    'border-radius' 	:  '50px',
+    float   			:  'left'
+			});
+$(id).html(' <h3>Your Defined Div: '+id+'</h3> <p>Width: '+w+ '<br>Height: '+h);
+i++;
+			}
+});
+</script>
+<div id="test1"></div>
+<div id="test2"></div>
+<div id="test3"></div>
+<div id="test4"></div>
+<div id="test5"></div>
+<div id="test6"></div>
+<div id="test7"></div>
+<div id="test8"></div>
+<div id="test9"></div>
+<div id="test10"></div>
+<div id="test11"></div>
+<div id="test12"></div>
+<div id="test13"></div>
+</body>
+</html>
